@@ -17,3 +17,9 @@ bootstrap.properties
 .gitignore
 out
 META-INF
+.classpath
+.project
+.settings/
+.vscode/
+*.class
+
