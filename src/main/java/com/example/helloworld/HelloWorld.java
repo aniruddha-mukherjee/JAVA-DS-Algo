@@ -1,37 +1,10 @@
 package com.example.helloworld;
-
+import static java.lang.System.out;
 
 import java.util.List;
 
 class HelloWorld {
-
 	public static void main(String[] args) {
-		/*int size= 3;
-		int [][] matrix ={
-				{1,0,0},
-				{1,0,0},
-				{1,1,1}
-		};
-
-		int size = 4;
-		int[][] matrix = {
-				{1, 0, 1, 0},
-				{0, 1, 0, 1},
-				{0, 0, 0, 1},
-				{0, 0, 0, 1}
-		};
-
-
-		int size = 4;
-		int[][] matrix = {
-				{1, 1, 0, 0},
-				{0, 0, 1, 0},
-				{0, 1, 0, 0},
-				{0, 0, 1, 1}
-		};
-
-
-		int size = 6;
 		int[][] matrix = {
 				{1, 1, 1, 1, 0, 0},
 				{0, 0, 0, 0, 1, 0},
@@ -40,23 +13,7 @@ class HelloWorld {
 				{0, 1, 0, 0, 0, 0},
 				{0, 0, 1, 1, 1, 1}
 		};
-*/
-
-		int[][] matrix = {
-				{ 1, 0, 1, 1, 1, 1, 0, 1, 1, 1 },
-				{ 1, 0, 1, 0, 1, 1, 1, 0, 1, 1 },
-				{ 1, 1, 1, 0, 1, 1, 0, 1, 0, 1 },
-				{ 0, 0, 0, 0, 1, 0, 0, 0, 0, 1 },
-				{ 1, 1, 1, 0, 1, 1, 1, 0, 1, 0 },
-				{ 1, 0, 1, 1, 1, 1, 0, 1, 0, 0 },
-				{ 1, 0, 0, 0, 0, 0, 0, 0, 0, 1 },
-				{ 1, 0, 1, 1, 1, 1, 0, 1, 1, 1 },
-				{ 1, 1, 0, 0, 0, 0, 1, 0, 0, 1 },
-				{ 1, 1, 0, 0, 0, 0, 1, 0, 0, 1 }
-		};
-
-
-		RatInMaze matrixSolver = new RatInMaze(matrix, matrix.length);
+		RatInMaze matrixSolver = new RatInMaze(matrix);
 		/*for (int[] cell : matrixSolver.pathExists()) {
 			System.out.println(cell[matrixSolver.ROW] + "," + cell[matrixSolver.COLUMN]);
 		}*/

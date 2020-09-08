@@ -1,5 +1,8 @@
-package com.OCA;
+package cert;
 
-public class Beverage {
+public  class Beverage {
+	public void importantMethod(){
+
+	}
 
 }

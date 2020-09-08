@@ -1,2 +1,6 @@
-package com.example.helloworld;public class Tea {
+package com.example.helloworld;
+import cert.Beverage;
+
+public class Tea extends Beverage{
+
 }
