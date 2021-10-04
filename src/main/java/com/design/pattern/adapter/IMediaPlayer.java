@@ -1,5 +1,5 @@
-package com.design.pattern.pattern.adapter;
+package com.design.pattern.adapter;
 
-public interface MediaPlayer {
+public interface IMediaPlayer {
 	public void play (String audioType,String fileName);
 }

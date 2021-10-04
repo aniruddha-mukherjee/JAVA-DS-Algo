@@ -1,7 +1,7 @@
-import food.Fruit;
+package food;
 
 class Apple extends Fruit{
-	 public void foo(){
+	void foo(){
 
 	};
 }

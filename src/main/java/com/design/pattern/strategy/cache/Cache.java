@@ -1,19 +1,22 @@
 package com.design.pattern.strategy.cache;
 
+import java.util.HashMap;
 import java.util.Map;
 
-public abstract class ACache implements ICache{
+public class Cache implements ICache{
 
 	private Map<Integer, String> fDataMap;
 	IEvictionPolicy fEvictionPolicy;
 	int maxSize;
 
-	public ACache(Map<Integer, String> dataMap, IEvictionPolicy evictionPolicy) {
+	public Cache(Map<Integer, String> dataMap, int maxSize, IEvictionPolicy evictionPolicy) {
 		this.fDataMap = dataMap;
+		this.maxSize = maxSize;
 		this.fEvictionPolicy = evictionPolicy;
 	}
 
-	public ACache(int maxSize, IEvictionPolicy evictionPolicy) {
+	public Cache(int maxSize, IEvictionPolicy evictionPolicy) {
+		fDataMap = new HashMap<>();
 		this.maxSize = maxSize;
 		this.fEvictionPolicy = evictionPolicy;
 	}
@@ -22,7 +25,7 @@ public abstract class ACache implements ICache{
 	public void put(int key, String value) {
 		if (!fDataMap.containsKey(key)) {
 			if (fDataMap.size() == maxSize) {
-				fEvictionPolicy.evict();
+				fDataMap.remove(fEvictionPolicy.evict());
 				fDataMap.put(key, value);
 			}
 			fEvictionPolicy.put(key);
@@ -36,5 +39,10 @@ public abstract class ACache implements ICache{
 			return null;
 		fEvictionPolicy.get(key);
 		return fDataMap.get(key);
+	}
+
+	public void printCache(){
+		fEvictionPolicy.printCache();
+		System.out.print(fDataMap.toString());
 	}
 }

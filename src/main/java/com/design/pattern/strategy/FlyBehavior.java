@@ -1,2 +1,5 @@
-package com.design.pattern.strategy;public interface FlyBehavior {
+package com.design.pattern.strategy;
+
+public interface FlyBehavior {
+	public void fly();
 }

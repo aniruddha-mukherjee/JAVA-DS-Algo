@@ -1,2 +1,5 @@
-package com.example.helloworld;public class abstractSample2 {
+package com.example.helloworld;
+
+abstract public class abstractSample2 implements Sample2{
+	abstract  public  String sampleMethod();
 }
