@@ -1,6 +1,7 @@
 package com.design.pattern.adapter;
 
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
+
+import org.apache.commons.lang3.NotImplementedException;
 
 public class VLCPlayer implements IAdvancedMediaPlayer{
 
@@ -11,6 +12,6 @@ public class VLCPlayer implements IAdvancedMediaPlayer{
 
 	@Override
 	public void playMP4(String fileName) {
-		throw new NotImplementedException();
+		throw new NotImplementedException("VLCPlayer");
 	}
 }

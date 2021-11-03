@@ -1,6 +1,5 @@
 package com.design.pattern.adapter;
 
-import com.sun.media.jfxmedia.MediaPlayer;
 
 public class MediaAdapter implements IMediaPlayer {
 	IAdvancedMediaPlayer fIAdvancedMediaPlayer;

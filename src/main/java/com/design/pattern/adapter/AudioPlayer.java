@@ -1,6 +1,5 @@
 package com.design.pattern.adapter;
 
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 public class AudioPlayer implements IMediaPlayer{
 	MediaAdapter fMediaAdapter;

@@ -1,11 +1,10 @@
 package com.example.helloworld;
 
 import java.util.List;
-
-import com.sun.istack.internal.NotNull;
+import javax.annotation.Nonnull;
 
 public class TestNullable {
-	public void foo(@NotNull List<Integer> param){
+	public void foo(@Nonnull List<Integer> param){
 		int i = param.hashCode();
 	}
 }
