@@ -1,3 +1,4 @@
+package com.interview.karat;
 import java.io.*;
 import java.util.*;
 
@@ -58,17 +59,18 @@ public class Coinbase {
         Map<String,List<Integer>> counterMap= new HashMap<>();
 
         //sort the badgeTimes
-        Arrays.sort(badgeTimes, new Comparator<String[]>() {
-            public int compare(String[] o1, String[] o2) {
+        Arrays.sort(badgeTimes, (o1, o2) -> {
+            if(o1[0].compareTo(o2[0]) ==0)
                 return Integer.compare(Integer.parseInt(o1[1]), Integer.parseInt(o2[1]));
-            }
+
+            return o1[0].compareTo(o2[0]);
         });
 
         for(String[]badgeTime : badgeTimes){
             String employee = badgeTime[0];
             int entryTime = Integer.parseInt(badgeTime[1]);
-            if(answer.containsKey(employee))
-                continue;
+            if(answer.containsKey(employee) && answer.get(employee).get(0) < entryTime - 100)
+              continue;
             //System.out.println(employee + entryTime);
 
             //if(employee.equalsIgnoreCase("Zhang"))
@@ -76,7 +78,7 @@ public class Coinbase {
 
             if(!counterMap.containsKey(employee)){
 
-                counterMap.put(employee, new ArrayList<Integer>());
+                counterMap.put(employee, new ArrayList<>());
                 counterMap.get(employee).add(entryTime);
 
             } else{
